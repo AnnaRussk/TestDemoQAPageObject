@@ -19,9 +19,9 @@ public class TestDemoQA extends TestBase {
     public void textFieldTest() {
         elementsPage.openElements();
         elementsPage.openTextBox();
-        elementsPage.enterUserName("Какое-то Имя");
+        elementsPage.enterUserName("Евгений");
         elementsPage.submitTextBox();
-        elementsPage.checkUserName("Какое-то Имя");
+        elementsPage.checkUserName("Евгений");
     }
 
     @Test
@@ -42,8 +42,8 @@ public class TestDemoQA extends TestBase {
     public void formTextTest() {
         formsPage.openForms();
         formsPage.openPracticeForm();
-        formsPage.enterFirstName("Имя");
-        formsPage.enterLastName("Фамилия");
+        formsPage.enterFirstName("Евгения");
+        formsPage.enterLastName("Коробкова");
         formsPage.selectGender();
         formsPage.enterPhoneNumber("1234567890");
         formsPage.submitForm();
