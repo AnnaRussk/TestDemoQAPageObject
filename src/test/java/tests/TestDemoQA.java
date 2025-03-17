@@ -1,15 +1,22 @@
-package PageObject;
+package tests;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import pages.Elements;
+import pages.Forms;
 
 public class TestDemoQA extends TestBase {
 
     private final Elements elementsPage = new Elements();
     private final Forms formsPage = new Forms();
 
+    @BeforeEach
+    public void openingPage() {
+        openPage();
+    }
+
     @Test
     public void textFieldTest() {
-        openPage();
         elementsPage.openElements();
         elementsPage.openTextBox();
         elementsPage.enterUserName("Какое-то Имя");
@@ -19,7 +26,6 @@ public class TestDemoQA extends TestBase {
 
     @Test
     public void checkBoxTest() {
-        openPage();
         elementsPage.openCheckBox();
         elementsPage.selectCheckBox();
         elementsPage.checkCheckBoxSelection();
@@ -27,7 +33,6 @@ public class TestDemoQA extends TestBase {
 
     @Test
     public void radioButtonTest() {
-        openPage();
         elementsPage.openRadioButton();
         elementsPage.selectRadioButton();
         elementsPage.checkRadioButtonSelection();
@@ -35,7 +40,6 @@ public class TestDemoQA extends TestBase {
 
     @Test
     public void formTextTest() {
-        openPage();
         formsPage.openForms();
         formsPage.openPracticeForm();
         formsPage.enterFirstName("Имя");
