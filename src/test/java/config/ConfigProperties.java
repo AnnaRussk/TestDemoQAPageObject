@@ -16,6 +16,6 @@ public interface ConfigProperties extends Config {
     @Key("baseUrl")
     String baseUrl();
 
-    @Key("browserBinary")
-    String browserBinary();
+/*    @Key("browserBinary")
+    String browserBinary();*/
 }
